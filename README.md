@@ -106,37 +106,45 @@ The trained model is saved at:
 `artifacts/model_pipeline.pkl`
 
 ## Project Structure
+
 ```text
-p2p-2/
+telco-churn-prediction-api/
 │
 ├── app/
 │   ├── main.py
 │   └── schemas.py
-│
-├── artifacts/
-│   └── model_pipeline.pkl
 │
 ├── data/
 │   └── WA_Fn-UseC_-Telco-Customer-Churn.csv
 │
 ├── model/
-│   ├── train.py
-│   ├── utils.py
-│   ├── experiments_models.py
-│   ├── experiments_sampling.py
 │   ├── experiments_feature_engineering.py
 │   ├── experiments_feature_engineering_minimal.py
-│   └── experiments_tuning.py
+│   ├── experiments_models.py
+│   ├── experiments_sampling.py
+│   ├── experiments_tuning.py
+│   ├── train.py
+│   ├── train_v2.py
+│   └── utils.py
 │
 ├── notebooks/
-│   └── eda.ipynb
+│   ├── eda.ipynb
+│   └── eda.txt
 │
-├── app/
-│   ├── main.py
-│   └── schemas.py
+├── streamlit_app/
+│   ├── api_client.py
+│   ├── app.py
+│   ├── requirements.txt
+│   ├── risk_logic.py
+│   └── shap_utils.py
 │
-├── Dockerfile
+├── .streamlit/
+│   └── config.toml
+│
 ├── .dockerignore
-├── requirements.txt
+├── .gitattributes
+├── .gitignore
+├── Dockerfile
 ├── README.md
-└── .gitignore
+├── requirements.txt
+└── run.py
